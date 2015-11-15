@@ -1,0 +1,98 @@
+{
+  "name": "CarcassProcessed",
+  "properties": {
+    "structure": [
+      {
+        "name": "StudyID",
+        "type": "String"
+      },
+      {
+        "name": "SeqNum",
+        "type": "String"
+      },
+      {
+        "name": "PlantID",
+        "type": "String"
+      },
+      {
+        "name": "Sex",
+        "type": "String"
+      },
+      {
+        "name": "HideColor",
+        "type": "String"
+      },
+      {
+        "name": "Tag",
+        "type": "String"
+      },
+      {
+        "name": "HCW",
+        "type": "String"
+      },
+      {
+        "name": "ApproxLiveWT",
+        "type": "String"
+      },
+      {
+        "name": "ApproxFarmWT",
+        "type": "String"
+      },
+      {
+        "name": "FatDepth",
+        "type": "String"
+      },
+      {
+        "name": "RibEyeArea",
+        "type": "String"
+      },
+      {
+        "name": "PctKPH",
+        "type": "String"
+      },
+      {
+        "name": "YieldGrade",
+        "type": "String"
+      },
+      {
+        "name": "USDAGrade",
+        "type": "String"
+      },
+      {
+        "name": "Marbling",
+        "type": "String"
+      },
+      {
+        "name": "QualityGrade",
+        "type": "String"
+      },
+      {
+        "name": "CAB",
+        "type": "String"
+      },
+      {
+        "name": "Comments",
+        "type": "String"
+      },
+      {
+        "name": "LiverAbcess",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/processed/carcass/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "HealthProcessed",
+  "properties": {
+    "structure": [
+      {
+        "name": "StudyID",
+        "type": "String"
+      },
+      {
+        "name": "DateTreated",
+        "type": "String"
+      },
+      {
+        "name": "TimeTreated",
+        "type": "String"
+      },
+      {
+        "name": "Tag",
+        "type": "String"
+      },
+      {
+        "name": "Symptom",
+        "type": "String"
+      },
+      {
+        "name": "Treatment",
+        "type": "String"
+      },
+      {
+        "name": "Amount",
+        "type": "String"
+      },
+      {
+        "name": "Comment",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/processed/health/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": "\t"
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

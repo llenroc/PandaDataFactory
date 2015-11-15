@@ -1,0 +1,70 @@
+{
+  "name": "WeightDetailProcessed",
+  "properties": {
+    "structure": [
+      {
+        "name": "StudyID",
+        "type": "String"
+      },
+      {
+        "name": "Pen",
+        "type": "String"
+      },
+      {
+        "name": "Treatment",
+        "type": "String"
+      },
+      {
+        "name": "Replication",
+        "type": "String"
+      },
+      {
+        "name": "Ration",
+        "type": "String"
+      },
+      {
+        "name": "Tag",
+        "type": "String"
+      },
+      {
+        "name": "PeriodDate",
+        "type": "String"
+      },
+      {
+        "name": "WT",
+        "type": "String"
+      },
+      {
+        "name": "Period",
+        "type": "String"
+      },
+      {
+        "name": "DaysInPeriod",
+        "type": "String"
+      },
+      {
+        "name": "RunningDays",
+        "type": "String"
+      },
+      {
+        "name": "ADG",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/processed/weightdetail/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

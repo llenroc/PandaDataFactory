@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c1b1ddec-f8b2-4663-89eb-79dff02171b5</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>DataFactory</AssemblyName>
+    <ApiVersion>2015-08-01</ApiVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Name>PandaDataFactory</Name>
+    <RootNamespace>PandaDataFactory</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ADFConfigFileToPublish>
+    </ADFConfigFileToPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Dependencies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Include="CarcassProcessed.json" />
+    <Script Include="CarcassRaw.json" />
+    <Script Include="CarcassSQL.json" />
+    <Script Include="CarcassToSQL.json" />
+    <Script Include="FeedFormat1DetailIntermediate.json" />
+    <Script Include="FeedFormat1HeaderIntermediate.json" />
+    <Script Include="FeedFormat1Raw.json" />
+    <Script Include="FeedFormat2DetailIntermediate.json" />
+    <Script Include="FeedFormat2HeaderIntermediate.json" />
+    <Script Include="FeedFormat2Raw.json" />
+    <Script Include="FeedProcessed.json" />
+    <Script Include="FeedSQL.json" />
+    <Script Include="FeedToSQL.json" />
+    <Script Include="HDInsightAlwaysRunningLinkedService.json" />
+    <Script Include="HDInsightOnDemandLinkedService.json" />
+    <Script Include="HealthProcessed.json" />
+    <Script Include="HealthRaw.json" />
+    <Script Include="HealthSQL.json" />
+    <Script Include="HealthToSQL.json" />
+    <Script Include="HiveProcessCarcass.json" />
+    <Script Include="HiveProcessFeed.json" />
+    <Script Include="HiveProcessFeedFormat1DetailIntermediate.json" />
+    <Script Include="HiveProcessFeedFormat1HeaderIntermediate.json" />
+    <Script Include="HiveProcessFeedFormat2DetailIntermediate.json" />
+    <Script Include="HiveProcessFeedFormat2HeaderIntermediate.json" />
+    <Script Include="HiveProcessHealth.json" />
+    <Script Include="HiveProcessMBI.json" />
+    <Script Include="HiveProcessStudies.json" />
+    <Script Include="HiveProcessWeightDetail.json" />
+    <Script Include="HiveProcessWeightSummary.json" />
+    <Script Include="MBIProcessed.json" />
+    <Script Include="MBIRaw.json" />
+    <Script Include="MBISQL.json" />
+    <Script Include="MBIToSQL.json" />
+    <Script Include="SqlDbLinkedService.json" />
+    <Script Include="StorageLinkedService.json" />
+    <Script Include="StudiesProcessed.json" />
+    <Script Include="StudiesRaw.json" />
+    <Script Include="StudiesToSQL.json" />
+    <Script Include="StudySQL.json" />
+    <Script Include="WeightDetailProcessed.json" />
+    <Script Include="WeightDetailSQL.json" />
+    <Script Include="WeightDetailToSQL.json" />
+    <Script Include="WeightRaw.json" />
+    <Script Include="WeightSummaryProcessed.json" />
+    <Script Include="WeightSummarySQL.json" />
+    <Script Include="WeightSummaryToSQL.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dependencies\ProcessCarcassRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessFeedFormat1DetailRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessFeedFormat1HeaderRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessFeedFormat2DetailRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessFeedFormat2HeaderRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessFeedRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessHealthRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessMBIRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessStudiesRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessWeightDetailRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\ProcessWeightSummaryRaw.hql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataFactory Tools for Visual Studio\MsBuild\1.0\DataFactory.targets" />
+</Project>

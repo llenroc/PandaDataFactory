@@ -1,0 +1,70 @@
+{
+  "name": "StudiesProcessed",
+  "properties": {
+    "structure": [
+      {
+        "name": "SpeciesGroup",
+        "type": "String"
+      },
+      {
+        "name": "StudyID",
+        "type": "String"
+      },
+      {
+        "name": "StudyDirector",
+        "type": "String"
+      },
+      {
+        "name": "StartDate",
+        "type": "String"
+      },
+      {
+        "name": "EndDate",
+        "type": "String"
+      },
+      {
+        "name": "Title",
+        "type": "String"
+      },
+      {
+        "name": "FarmLocation",
+        "type": "String"
+      },
+      {
+        "name": "FeedingType",
+        "type": "String"
+      },
+      {
+        "name": "AnimalType",
+        "type": "String"
+      },
+      {
+        "name": "NumberOfAnimals",
+        "type": "String"
+      },
+      {
+        "name": "TransitionID",
+        "type": "String"
+      },
+      {
+        "name": "Status",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/processed/studies/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

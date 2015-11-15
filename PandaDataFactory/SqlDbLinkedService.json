@@ -1,0 +1,11 @@
+{
+  "name": "SqlDbLinkedService",
+  "properties": {
+    "description": "Destination Azure Sql server where data will be copied to",
+    "type": "AzureSqlDatabase",
+    "typeProperties": {
+      "connectionString": "Data Source=tcp:aop4r88azz.database.windows.net,1433;Initial Catalog=Panda;Integrated Security=False;User ID=pandaadmin;Password=**********;Connect Timeout=30;Encrypt=True"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.LinkedService.json"
+}

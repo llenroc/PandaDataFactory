@@ -1,0 +1,13 @@
+{
+  "name": "HDInsightAlwaysRunningLinkedService",
+  "properties": {
+    "type": "HDInsight",
+    "typeProperties": {
+      "clusterUri": "https://pandahdi.azurehdinsight.net",
+      "userName": "admin",
+      "password": "**********",
+      "linkedServiceName": "StorageLinkedService"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.LinkedService.json"
+}

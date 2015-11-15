@@ -1,0 +1,16 @@
+{
+  "name": "FeedSQL",
+  "properties": {
+    "published": false,
+    "type": "AzureSqlTable",
+    "linkedServiceName": "SqlDbLinkedService",
+    "typeProperties": {
+      "tableName": "Feed"
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

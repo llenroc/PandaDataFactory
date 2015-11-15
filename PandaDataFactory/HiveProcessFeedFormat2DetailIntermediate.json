@@ -1,0 +1,41 @@
+{
+  "name": "HiveProcessFeedFormat2DetailIntermediate",
+  "properties": {
+    "description": "",
+    "activities": [
+      {
+        "type": "HDInsightHive",
+        "typeProperties": {
+          "scriptPath": "scripts\\ProcessFeedFormat2DetailRaw.hql",
+          "scriptLinkedService": "StorageLinkedService"
+        },
+        "inputs": [
+          {
+            "name": "FeedFormat2Raw"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "FeedFormat2DetailIntermediate"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 3
+        },
+        "scheduler": {
+          "frequency": "Hour",
+          "interval": 1
+        },
+        "name": "RunHive",
+        "linkedServiceName": "HDInsightAlwaysRunningLinkedService"
+      }
+    ],
+    "start": "2015-11-05T00:00:00Z",
+    "end": "2015-12-31T00:00:00Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Pipeline.json"
+}

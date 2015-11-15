@@ -1,0 +1,62 @@
+{
+  "name": "FeedFormat2HeaderIntermediate",
+  "properties": {
+    "structure": [
+      {
+        "name": "FileName",
+        "type": "String"
+      },
+      {
+        "name": "Exper",
+        "type": "String"
+      },
+      {
+        "name": "Calf",
+        "type": "String"
+      },
+      {
+        "name": "Sex",
+        "type": "String"
+      },
+      {
+        "name": "StartDate",
+        "type": "String"
+      },
+      {
+        "name": "Treat",
+        "type": "String"
+      },
+      {
+        "name": "Rep",
+        "type": "String"
+      },
+      {
+        "name": "Ration",
+        "type": "String"
+      },
+      {
+        "name": "PenID",
+        "type": "String"
+      },
+      {
+        "name": "GateID",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/intermediate/feedformat2header/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

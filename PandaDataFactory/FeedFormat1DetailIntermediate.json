@@ -1,0 +1,62 @@
+{
+  "name": "FeedFormat1DetailIntermediate",
+  "properties": {
+    "structure": [
+      {
+        "name": "FileName",
+        "type": "String"
+      },
+      {
+        "name": "StartDate",
+        "type": "String"
+      },
+      {
+        "name": "EndDate",
+        "type": "String"
+      },
+      {
+        "name": "StartTime",
+        "type": "String"
+      },
+      {
+        "name": "EndTime",
+        "type": "String"
+      },
+      {
+        "name": "Ration",
+        "type": "String"
+      },
+      {
+        "name": "FI",
+        "type": "String"
+      },
+      {
+        "name": "FO",
+        "type": "String"
+      },
+      {
+        "name": "Count",
+        "type": "String"
+      },
+      {
+        "name": "BC",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/intermediate/feedformat1detail/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

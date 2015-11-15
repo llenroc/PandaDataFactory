@@ -1,0 +1,42 @@
+{
+  "name": "FeedFormat2DetailIntermediate",
+  "properties": {
+    "structure": [
+      {
+        "name": "FileName",
+        "type": "String"
+      },
+      {
+        "name": "FeedDate",
+        "type": "String"
+      },
+      {
+        "name": "Ration",
+        "type": "String"
+      },
+      {
+        "name": "FeedIntake",
+        "type": "String"
+      },
+      {
+        "name": "FeedType",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedService",
+    "typeProperties": {
+      "folderPath": "hdi/intermediate/feedformat2detail/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}
